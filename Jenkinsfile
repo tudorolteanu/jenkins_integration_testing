@@ -29,7 +29,8 @@ pipeline {
             }
             steps {
                 script {
-                    gv.testApp()
+                    bat '''cd C:\\BPS\\APACHE\\apache-jmeter-5.5\\bin
+                        jmeter -n -t C:\\TESTING\\PerformanceScripts\\jmeter.jmx -l C:\\TESTING\\PerformanceScripts\\result\\TestResult1.jtl'''
                 }
             }
         }
